@@ -1,23 +1,22 @@
 {
-    "private": true,
-    "name": "portfolio-app",
-    "engines": {
-      "node": "10.17.0"
-    },
-    "workspaces": [
-      "packages/*"
-    ],
-    "scripts": {
-      "client": "yarn workspace @portfolio/frontend start",
-      "server": "yarn workspace @portfolio/backend start",
-      "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|css)\"",
-      "format:frontend": "yarn workspace @portfolio/frontend format:lint",
-      "format:backend": "yarn workspace @portfolio/backend format:lint"
-    },
-    "husky": {
-      "hooks": {
-        "pre-commit": "yarn format:frontend && yarn format:backend"
-      }
+  "private": true,
+  "name": "portfolio-app",
+  "engines": {
+    "node": "22.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace @portfolio/frontend start",
+    "server": "yarn workspace @portfolio/backend start",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|css)\"",
+    "format:frontend": "yarn workspace @portfolio/frontend format:lint",
+    "format:backend": "yarn workspace @portfolio/backend format:lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format:frontend && yarn format:backend"
     }
   }
-  
+}

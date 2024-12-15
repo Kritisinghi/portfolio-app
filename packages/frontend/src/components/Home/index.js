@@ -1,5 +1,4 @@
 import React from "react";
-import Particles from "react-particles-js";
 import Typewriter from "typewriter-effect";
 
 import "./style.css";
@@ -8,7 +7,6 @@ const Home = () => {
   return (
     <section id="home">
       <div className="banner">
-        <Particles style={{ position: "absolute" }} />
         <div className="banner-text">
           <h1 className="responsive-headline">
             <Typewriter
