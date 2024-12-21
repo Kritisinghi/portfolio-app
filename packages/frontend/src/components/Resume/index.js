@@ -12,7 +12,6 @@ const Resume = ({ skills, resume }) => {
       </li>
     );
   });
-  console.log("=====", resume);
 
   return (
     <section id="resume">
