@@ -6,27 +6,32 @@ module.exports = (options) => ({
 
   entry: options.entry,
 
-  output: Object.assign(
-    {
-      path: path.resolve(process.cwd(), `dist`),
-    },
-    options.output
-  ),
+  output: {
+    path: path.resolve(process.cwd(), "dist"),
+    ...options.output, // Merging additional output options if provided
+  },
 
   optimization: options.optimization,
 
-  plugins: options.plugins.concat([
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-    }),
-  ]),
+  plugins: [
+    ...options.plugins
+  ],
 
   devtool: options.devtool,
   performance: options.performance || {},
   devServer: options.devServer,
 
   module: {
-    rules: options.module.rules.concat([
+    rules: [
+      ...options.module.rules,
+      // TypeScript Loader for .ts and .tsx files
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: "ts-loader",
+      },
+
+      // Babel Loader for JavaScript files
       {
         test: /\.js$/,
         exclude: /node_modules\/(?!(ansi-regex)\/).*/,
@@ -37,12 +42,15 @@ module.exports = (options) => ({
               [
                 "@babel/env",
                 {
-                  targets: [">1%"],
+                  targets: ">1%", // Adjust this based on your browser support
                 },
               ],
               "@babel/react",
             ],
-            plugins: ["@babel/proposal-class-properties", "@babel/syntax-dynamic-import"],
+            plugins: [
+              "@babel/proposal-class-properties",
+              "@babel/syntax-dynamic-import",
+            ],
           },
         },
       },
@@ -59,6 +67,7 @@ module.exports = (options) => ({
           flags: "g",
         },
       },
+      // Asset Handling for images (using Webpack 5 asset modules)
       {
         test: /\.(gif|png|jpe?g|svg)$/,
         use: [
@@ -70,13 +79,9 @@ module.exports = (options) => ({
             },
           },
         ],
-        // loader: require.resolve("url-loader"),
-        // options: {
-        //   name: "[name].[ext]",
-        //   limit: 10000,
-        //   outputpath: "assets/images",
-        // },
       },
+
+      // Asset Handling for PDFs (using Webpack 5 asset modules)
       {
         test: /\.pdf$/,
         use: [
@@ -89,10 +94,11 @@ module.exports = (options) => ({
           },
         ],
       },
-    ]),
+    ],
   },
+
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".css"],
+    extensions: [".js", ".jsx", ".tsx", ".ts",".json", ".css"],
     modules: [
       path.resolve(process.cwd(), "../../node_modules"),
       path.resolve(process.cwd(), "node_modules"),

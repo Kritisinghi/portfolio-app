@@ -20,8 +20,9 @@
     ]
   },
   "about": {
-    "mainIntro": " Hi there! I am Kriti Raj! I am working as a Full Stack developer with 6 years of experience. I've worked dozens of projects designing, building and deploying applications from dev to production environment.I have experience working in multiple domains like AI, Finance and HR. With this I bring extensive experience in Web Development technologies and also with shipping the build to production.",
-    "secondaryIntro": " Apart from developing web applications and coding, I like to play cricket, listen to music and go for parties.",
+    "mainIntro": " Hello! I am Kriti Raj, a seasoned Full Stack Developer with 7+ years of extensive experience in designing, building, and deploying applications from development to production environments. Throughout my career, I have led teams on numerous projects across diverse domains, including Artificial Intelligence, Finance, and Human Resources. My leadership has consistently driven projects to success, fostering collaboration and innovation within my teams.",
+    "secondaryIntro": " My expertise encompasses a wide range of web development technologies, with a strong emphasis on design and architecture. I excel in creating scalable, efficient, and aesthetically pleasing applications that meet and exceed client expectations. My strategic approach to development ensures seamless transitions from the conceptual phase through to deployment, delivering high-quality production builds.",
+    "moreIntro": "In addition to my technical and leadership skills, I am committed to continuous learning and staying at the forefront of industry trends. This dedication allows me to integrate the latest advancements into my work, providing cutting-edge solutions to complex problems. Outside of my professional life, I enjoy playing cricket, listening to music, and socializing at events. These activities provide a well-rounded balance, contributing to my overall well-being and enhancing my creativity and productivity.",
     "contact": {
       "name": "Kriit Raj Singhi",
       "location": "Birmingham, UK",
@@ -32,21 +33,24 @@
   "resume": [
     {
       "company": "Goldman Sachs",
-      "title": "Associate",
-      "introduction": "Working with the global team to develop new features for CRM application adding more capabilities to automate the data ingestion from various sources on better tracking and help impriove the relationship with the clients.",
-      "time": "Mar 2022 - Present"
+      "title": "Senior Software Engineer [Vice President]",
+      "introduction": "Working with the global teams to develop new features for CRM application with capabilities to create self-service dynamic and customizable dashboards, consolidating the data ingestions making the data clean and less error prone.",
+      "time": "Mar 2022 - Present",
+      "logo": "assets/images/gs.svg"
     },
     {
       "company": "Netapp",
       "title": "Member of Technical staff 3",
-      "introduction": "Full stack developer worked with design and development of the SPOT PC product.",
-      "time": "May 2021 - Mar 2022"
+      "introduction": "As a Full Stack Developer, I played a pivotal role in both the design and development of the SPOT PC product, ensuring a seamless integration of front-end and back-end technologies to deliver a robust and user-friendly solution.",
+      "time": "May 2021 - Mar 2022",
+      "logo": "assets/images/netapp.svg"
     },
     {
       "company": "Wipro Digital",
-      "title": "Full Stack Developer",
-      "introduction": "Working onsite at the client's location to better understand the requirements and apply my skills to provide intuitive response customer experience and also minimising the operation cost. Contribute in full-stack expertise knowledge in the development of products from requirements definition phase till go live. Worked closely with each client to fully understand their requirements and deliver accordingly. Excelled at rapid application development and management of technological issues for assigned projects.",
-      "time": "Jun 2016 - May 2021"
+      "title": "Senior Software Engineer [Technical Lead]",
+      "introduction": "Transformed the home insurance claims journey from telephony to the digital. Worked onsite at the client's location to understand the business requirements and apply my skills to provide intuitive and responsive customer experience minimizing the customer migration impact. Also minimized the operation cost by 80%. Contributed in full-stack expertise knowledge in the development of products from requirements definition phase till go live. Worked closely with each client to fully understand their requirements and deliver accordingly. Excelled at rapid application development and management of technological issues for assigned projects.",
+      "time": "Jun 2016 - May 2021",
+       "logo": "assets/images/wipro.svg"
     }
   ],
   "skills": {
@@ -54,43 +58,99 @@
     "skillProficiency": [
       {
         "name": "JavaScript",
-        "level": "90%"
+        "level": "90%",
+        "logo": "devicon-javascript-plain colored"
+      },
+      {
+        "name": "Java",
+        "level": "90%",
+        "logo": "devicon-java-plain colored"
+      },
+      {
+        "name": "TypeScript",
+        "level": "90%",
+        "logo": "devicon-typescript-plain colored"
       },
       {
         "name": "ReactJs",
-        "level": "90%"
+        "level": "90%",
+        "logo": "devicon-react-original colored"
       },
       {
-        "name": "Angular",
-        "level": "90%"
+        "name": "NodeJs",
+        "level": "80%",
+        "logo": "devicon-nodejs-plain-wordmark colored"
       },
       {
-        "name": "Nodejs",
-        "level": "80%"
+        "name": "NextJs",
+        "level": "60%",
+        "logo": "devicon-nextjs-original-wordmark colored"
       },
       {
-        "name": "Spring-Boot",
-        "level": "50%"
+        "name": "GraphQL",
+        "level": "60%",
+        "logo": "devicon-graphql-plain colored"
       },
       {
         "name": "HTML5",
-        "level": "90%"
+        "level": "90%",
+        "logo": "devicon-html5-plain colored"
       },
       {
+        "name": "CSS",
+        "logo": "devicon-css3-plain colored"
+      },
+      {
+        "name": "ExpressJs",
+        "logo": "devicon-express-original-wordmark"
+      },
+      {
+        "name": "Spring-Boot",
+        "level": "50%",
+        "logo": "devicon-spring-original colored"
+      },
+     
+      {
         "name": "Docker",
-        "level": "70%"
+        "level": "70%",
+        "logo": "devicon-docker-plain colored"
+      },
+      {
+        "name": "MySql",
+        "level": "80%",
+        "logo": "devicon-mysql-plain-wordmark colored"
+      },
+      {
+        "name": "ElasticSearch",
+        "level": "30%",
+        "logo": "devicon-elasticsearch-plain-wordmark colored"
+      },
+      {
+        "name": "MongoDb",
+        "level": "90%",
+        "logo": "devicon-mongodb-plain colored"
+      },
+      {
+        "name": "GitHub",
+        "level": "90%",
+        "logo": "devicon-git-plain colored"
       },
       {
         "name": "Jenkins",
-        "level": "50%"
+        "level": "90%",
+        "logo": " devicon-jenkins-line colored"
       },
       {
-        "name": "Azure",
-        "level": "30%"
+        "name": "OAuth",
+        "logo": "devicon-oauth-plain colored"
       },
       {
-        "name": "React Native",
-        "level": "60%"
+        "name": "Angular",
+        "logo":"devicon-angular-plain colored"
+      },
+      {
+        "name": "Webpack",
+        "logo": "devicon-webpack-plain colored"
       }
     ]
   },

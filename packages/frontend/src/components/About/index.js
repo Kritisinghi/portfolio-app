@@ -1,14 +1,9 @@
 import React from "react";
 import profile from "assets/images/profile.png";
 import resume from "assets/kriticv.pdf";
-import Button from "components/Button";
 
 import "./style.css";
 const About = ({ data }) => {
-  const resumeDownload = () => {
-    window.open(resume, "_blank");
-  };
-
   return (
     <section id="about">
       <div className="about-row">
@@ -20,8 +15,9 @@ const About = ({ data }) => {
             <h3>About Me</h3>
             <p>{data.mainIntro}</p>
             <p>{data.secondaryIntro}</p>
+            <p>{data.moreIntro}</p>
           </div>
-          <div className="contact-details-block">
+          {/* <div className="contact-details-block">
             <div>
               <h4>Contact</h4>
               <p className="">
@@ -44,7 +40,7 @@ const About = ({ data }) => {
                 icon="fa fa-download"
               ></Button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

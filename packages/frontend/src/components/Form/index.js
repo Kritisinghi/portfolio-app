@@ -118,6 +118,7 @@ const Form = ({ data, onSubmit, apiResponse }) => {
               }
             })}
           </form>
+          <a className="direct-mail-link" href="mailto:kritirajsinghi@gmail.com">Send me email directly</a>
           <button
             disabled={!(error && error.length <= 0)}
             className="button is-primary is-rounded is-small is-filled btn-center-small"

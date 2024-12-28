@@ -1,9 +1,14 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-
+import Button from "components/Button";
+import resume from "assets/kriticv.pdf";
 import "./style.css";
 
 const Home = () => {
+  const resumeDownload = () => {
+    window.open(resume, "_blank");
+  };
+
   return (
     <section id="home">
       <div className="banner">
@@ -18,10 +23,16 @@ const Home = () => {
             />
           </h1>
           <h3>
-            Full Stack Developer @ Goldman Sachs.<span> Based in Birmingham, UK.</span> <br />I
-            Design, Build &amp; Deploy Fast, Responsive, Intuitive, Dynamic Web App&apos;s .
+            Senior Software Engineer @ Goldman Sachs<span> based in Birmingham, UK.</span> <br />I
+            Design, Build &amp; Deploy Fast, Responsive Dynamic Web App&apos;s .
           </h3>
           <hr />
+          <div className="resume-dwnld-block">
+            <Button className="button is-primary is-filled"
+                    text="Resume"
+                    onClick={resumeDownload}
+                    icon="fa fa-download"/>
+          </div>
         </div>
       </div>
     </section>
