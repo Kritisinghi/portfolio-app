@@ -5,15 +5,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = require("./webpack.base")({
   mode: "development",
   devServer: {
-    contentBase: path.resolve(process.cwd(), "dist"),
     compress: true,
     historyApiFallback: true,
     host: process.env.HOST || "0.0.0.0",
     port: process.env.PORT || 3000,
-    sockPort: process.env.SOCK_PORT || 3001,
-    public: process.env.PUBLIC,
   },
-  entry: ["./src/app.js"],
+  entry: ["./src/app.tsx"],
   output: {
     filename: "[name].[hash].js",
     chunkFilename: "[name].[hash].js",
@@ -64,7 +61,5 @@ module.exports = require("./webpack.base")({
     },
   },
   devtool: "eval-source-map",
-  performance: {
     hints: false,
-  },
 });

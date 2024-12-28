@@ -31,8 +31,8 @@ header {
 
 .navbar-img {
   object-fit: contain;
-  height: 55px;
-  width: 55px;
+  height: 40px;
+  width: 40px;
 }
 
 .navbar ul,
@@ -74,16 +74,18 @@ ul.navbar-menu li a {
   line-height: 32px;
   text-decoration: none;
   text-align: left;
-  -webkit-transition: color .2s ease-in-out;
-  -moz-transition: color .2s ease-in-out;
-  -o-transition: color .2s ease-in-out;
-  -ms-transition: color .2s ease-in-out;
-  transition: color .2s ease-in-out;
+  -webkit-transition: color .3s ease-in-out, transform .3s ease;
+  -moz-transition: color .3s ease-in-out, transform .3s ease;
+  -o-transition: color .3s ease-in-out, transform .3s ease;
+  -ms-transition: color .3s ease-in-out, transform .3s ease;
+  transition: color .3s ease-in-out, transform .3s ease;
 }
 
 ul.navbar-menu li a:hover {
   color: #F06000;
+  transform: translateY(-5px);
 }
+
 
 ul.navbar-menu li a:active {
   background-color: transparent !important;

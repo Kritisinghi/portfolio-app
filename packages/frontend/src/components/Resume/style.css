@@ -4,6 +4,7 @@
   display: inline-table;
   /* max-width: 1020px; */
   padding: 2rem 4rem 0rem 4rem;
+  margin-bottom: 3rem;
 }
 
 #resume h3 {
@@ -13,11 +14,12 @@
 
 .bars {
   width: 100%;
-  float: left;
-  padding: 0;
-  text-align: left;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+}
+
+.skills-block {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bars .skills {
@@ -75,6 +77,7 @@
 }
 
 .resume-item-title {
+  margin-top: 2rem;
   align-items: flex-start;
   /* display: flex; */
   justify-content: center;
@@ -91,6 +94,7 @@
   letter-spacing: 1px;
   padding-bottom: 8px;
   font-weight: bolder;
+  margin-bottom: 3rem;
 }
 
 .resume-item-main-col .light-para {
@@ -99,6 +103,37 @@
   margin: 0 0 30px;
   text-align: justify;
   line-height: 28px;
+}
+.resume-logo-div {
+  margin-top: -45px;
+  align-content: center;
+}
+.resume-logo {
+  width: 50%;
+}
+
+.card {
+  width: 12rem;
+  padding: 1rem 0.5rem;
+  background-color: rgb(249 250 251 / 1)!important;
+  border-radius: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: row!important;
+  border: none!important;
+  margin: 1rem 0.5rem;
+  /* margin: 1rem; */
+}
+
+.card i {
+  font-size: 3rem;
+  height: auto;
+  max-width: 100%;
+}
+
+
+.card .text-md {
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 767px) {

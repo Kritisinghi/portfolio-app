@@ -3,15 +3,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OfflinePlugin = require("offline-plugin");
-const { HashedModuleIdsPlugin } = require("webpack");
 const OptimizedCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = require("./webpack.base")({
   mode: "production",
-  entry: ["./src/app.js"],
+  devtool: 'source-map', 
+  entry: ["./src/app.tsx"],
   output: {
     filename: "assets/js/[name].[chunkhash].js",
     chunkFilename: "assets/js/[name].[contenthash:8].chunk.js",
+    publicPath: ''
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -35,13 +36,7 @@ module.exports = require("./webpack.base")({
         minifyURLs: true,
       },
       inject: true,
-    }),
-
-    new HashedModuleIdsPlugin({
-      hashFunction: "sha256",
-      hashDigest: "hex",
-      hashDigestLength: 20,
-    }),
+    })
   ],
 
   module: {
@@ -72,11 +67,13 @@ module.exports = require("./webpack.base")({
   },
   optimization: {
     minimize: true,
+    moduleIds: 'hashed',
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           warnings: false,
           compress: {
+            drop_console: true,
             comparisons: false,
           },
           parse: {},
@@ -87,8 +84,6 @@ module.exports = require("./webpack.base")({
           },
         },
         parallel: true,
-        cache: true,
-        sourceMap: false,
       }),
       new OptimizedCssAssetsPlugin({}),
     ],
@@ -96,25 +91,19 @@ module.exports = require("./webpack.base")({
     providedExports: true,
     usedExports: true,
     splitChunks: {
-      chunks: "all",
-      minSize: 30000,
-      minChunks: 1,
-      maxAsyncRequests: 5,
-      maxInitialRequests: 5,
-      name: true,
+      chunks: 'all',
       cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-            return `${packageName.replace("@", "")};`;
-          },
-        },
-        main: {
-          chunks: "all",
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name(module) {
+              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+              return `${packageName.replace("@", "")};`;
+            },
+          },  
+        default: {
           minChunks: 2,
+          priority: -10,
           reuseExistingChunk: true,
-          enforce: true,
         },
       },
     },

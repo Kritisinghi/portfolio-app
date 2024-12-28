@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import "./style.css";
 
-const SideDrawer = ({ show, data }) => {
+const SideDrawer = ({ show, data, onClick }) => {
   const sideDrawerClass = ["sideDrawer"];
 
   if (show) {

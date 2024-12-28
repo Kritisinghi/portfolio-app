@@ -64,8 +64,9 @@ span.error {
   font-size: 12px;
 }
 .btn-center-small {
-  margin-left: 35%;
-  width: 30%;
+  margin-left: 10%;
+  justify-content: center;
+  width: 26%;
 }
 .checkmark__circle {
   stroke-dasharray: 166;
@@ -98,6 +99,11 @@ span.error {
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.direct-mail-link {
+  text-decoration: underline;
+  color: black;
 }
 
 @keyframes stroke {
