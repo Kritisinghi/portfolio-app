@@ -11,9 +11,7 @@ const Resume = ({ skills, resume }) => {
     return (
       <div className="card">
          <i className={skills.logo}></i>
-        {/* <img  src={skills.logo} alt="hello"></img> */}
         <h4 class="text-md ml-3">{skills.name}</h4>
-       
       </div>
     );
   });
@@ -35,7 +33,8 @@ const Resume = ({ skills, resume }) => {
                 <h3>{item.company}</h3>
                 <div className="light-para">
                   <p>
-                    <i>{item.title}&nbsp;&nbsp; </i> |&nbsp;&nbsp; {item.time}
+                    <span>{item.title}&nbsp;&nbsp; </span> |&nbsp;&nbsp; 
+                    <span>{item.time}</span>
                   </p>
                 </div>
                 <div className="light-para">{item.introduction}</div>
@@ -43,7 +42,6 @@ const Resume = ({ skills, resume }) => {
             </div>
           ))}
         </div>
-        {/* </div> */}
         <div className="resume-item-title">
           <h1>Skills </h1>
         </div>
@@ -53,14 +51,9 @@ const Resume = ({ skills, resume }) => {
           </div>
           <div className="skills-block">
               {mappedSkills}
-            {/* </ul> */}
           </div>
-            {/* <div>
-              <ul className="skills">{mappedSkills.slice(skills.skillProficiency.length / 2)}</ul>
-            </div> */}
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

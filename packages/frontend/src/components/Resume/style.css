@@ -17,7 +17,7 @@
 }
 
 .skills-block {
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
 }
@@ -145,6 +145,10 @@
     padding: 2rem 2rem 0rem 2rem;
   }
 
+  .resume-logo {
+    display: none;
+  }
+
   .bars,
   .resume-item {
     display: block;
@@ -156,10 +160,18 @@
     font-size: 20px;
     margin-top: 20px;
   }
+  
+  .resume-item-main-col {
+    margin-top: 3rem;
+  }
 
   .resume-item-main-col .light-para p {
-    font-size: 15px;
+    font-size: 13px;
     display: flex;
     justify-content: center;
+  }
+
+  .resume-item-main-col .light-para p:nth-child(1) {
+    display: block;
   }
 }
