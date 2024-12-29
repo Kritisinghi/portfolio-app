@@ -45,7 +45,6 @@ button.submit {
   height: auto;
   display: inline-block;
   border-radius: 3px;
-  margin-left: 26%;
 }
 
 button.submit:hover {
@@ -64,7 +63,6 @@ span.error {
   font-size: 12px;
 }
 .btn-center-small {
-  margin-left: 10%;
   justify-content: center;
   width: 26%;
 }
@@ -101,9 +99,18 @@ span.error {
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 
+.display-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
 .direct-mail-link {
   text-decoration: underline;
   color: black;
+  margin-top: 2rem;
 }
 
 @keyframes stroke {
