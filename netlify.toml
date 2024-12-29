@@ -1,0 +1,7 @@
+[build]
+  base = "packages/frontend"
+  publish = "dist"
+  command = "yarn install --cwd ../.. && yarn run build"
+
+[build.environment]
+  NODE_VERSION = "22.3.0"
