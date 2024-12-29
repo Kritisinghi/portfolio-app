@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-var whitelist = ['https://kriti-raj-profile-d81186c30f36.herokuapp.com'];
+var whitelist = process.env.WHITELIST_URLS?.split(',') ?? [];
 
 if (process.env.NODE_ENV === 'development') {
   whitelist.push('http://localhost:3000');
