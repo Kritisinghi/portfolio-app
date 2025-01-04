@@ -23,7 +23,7 @@ const Home = () => {
             />
           </h1>
           <h3>
-            Senior Software Engineer @ Goldman Sachs<span> based in Birmingham, UK.</span> <br />I
+            Senior Software Engineer@Goldman Sachs<span> based in Birmingham, UK.</span> <br />I
             Design, Build &amp; Deploy Fast, Responsive Dynamic Web App&apos;s .
           </h3>
           <hr />
