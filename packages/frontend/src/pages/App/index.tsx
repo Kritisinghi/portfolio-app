@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import logo from "assets/images/logo.png";
 import Navbar from "components/Navbar";
@@ -14,23 +14,35 @@ import portfolioContent from "content/data.json";
 
 const App: React.FC = () => {
   const [sideToggle, setSideToggle] = useState<boolean>(false);
-
+  const menuRef = useRef<HTMLDivElement>(null);
   const data: Data = portfolioContent;
+ 
+  useEffect(() => {
+    const handleClickOutside = (event: Event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+          setSideToggle(false)
+      }
+    };
+    document.addEventListener('pointerdown', handleClickOutside);
+    return () => {
+      document.removeEventListener('pointerdown', handleClickOutside);
+    };
+  }, [menuRef]);
 
   return (
     <div className="portfolio-app">
-      <Navbar
-        click={() => setSideToggle(!sideToggle)}
-        logo={logo}
-        logoAlt="KRS"
-        menuItem="Contact Me"
-        data={data.nav}
-      />
-      <SideDrawer
-        show={sideToggle}
-        data={data.nav}
-        onClick={() => setSideToggle(!sideToggle)}
-      />
+      <div ref={menuRef}>
+        <Navbar
+          click={() => setSideToggle(!sideToggle)}
+          logo={logo}
+          logoAlt="KRS"
+          menuItem="Contact Me"
+          data={data.nav} />
+        <SideDrawer
+          show={sideToggle}
+          data={data.nav}
+          onClick={() => setSideToggle(!sideToggle)} />
+      </div>
       <Home />
       <About data={data.about} />
       <Resume resume={data.resume} skills={data.skills} />

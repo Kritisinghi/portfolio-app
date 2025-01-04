@@ -15,6 +15,8 @@ $font:"europa",sans-serif;
     height: 2.5em;
     padding: 1.25em 2em;
     width: 100%;
+    display: flex;
+    align-items: center;
     i{
         padding: 7px 10px;
     }
@@ -73,8 +75,6 @@ $font:"europa",sans-serif;
 }
 .button-icon:first-child:not(:last-child){
     margin-left: calc(-0.5em - 1px);
-    margin-right: 0.4rem;
-    margin-top: -0.2em;
 }
 
 .button-icon{
