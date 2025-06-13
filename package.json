@@ -2,7 +2,7 @@
   "private": true,
   "name": "portfolio-app",
   "engines": {
-    "node": "22.3.0"
+    "node": ">20.0.0"
   },
   "workspaces": [
     "packages/*"
